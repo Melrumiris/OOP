@@ -1,20 +1,25 @@
 #include <iostream>
+#include <fstream>
+#include <cstring>
+using namespace std;
 
-bool isPrime(int n)
-{
-    for (int tr = 2; tr < n /2; tr++)
-        if ((n % tr ) == 0)
-            return false;
-    return true;
+int Str_Int(char str[]) {
+    int num = 0, digit=1;
+    for (int i=strlen(str)-1; i>=0; i--){
+        num += (str[i] - '0')*digit;
+        digit*=10;
+    }
+    return num;
 }
+
 int main()
-{
-    int n;
-    std::cout << "Enter a number:";
-    std::cin >> n;
-    if (isPrime(n))
-        std::cout << n << " is prime !";
-    else
-        std::cout << n << " is NOT prime !";
+{   char number[100];
+    int sum=0;
+    FILE* file = fopen("ini.txt", "r");
+    while (fgets(number, 100, file)) {
+        sum+= Str_Int(number);
+    }
+    printf("The sum is %d \n", sum);
+    fclose(file);
     return 0;
 }
