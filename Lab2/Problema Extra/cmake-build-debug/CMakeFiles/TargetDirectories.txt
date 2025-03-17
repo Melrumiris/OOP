@@ -1,3 +1,0 @@
-C:/Users/asus/Desktop/Problema Extra/cmake-build-debug/CMakeFiles/Problema_Extra.dir
-C:/Users/asus/Desktop/Problema Extra/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/asus/Desktop/Problema Extra/cmake-build-debug/CMakeFiles/rebuild_cache.dir
